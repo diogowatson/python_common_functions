@@ -1,3 +1,3 @@
 # python_common_functions
-# common fuctions to used around multiple projects
+# common fuctions to be used around multiple projects
 # most reference
