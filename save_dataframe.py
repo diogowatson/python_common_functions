@@ -1,0 +1,32 @@
+import pandas as pd
+from datetime import datetime as dt
+
+
+def times_as_string():
+    #returns current date in string format
+
+    return dt.now().strftime('%Y-%m-%d %H %M %S')
+
+
+def save_dataframe_as_excel(df, outputFile, sheetName='sheet1'):
+    '''save an pandas DataFrame to an Excel file
+    df -> DataFrame to be converted
+    outputFile -> path and name of the file
+    sheetName -> name of the sheet'''
+
+    try:
+        #.xlsx already in the outputfile string
+        if '.xlsx' in outputFile:
+            outputFile = outputFile +"_" + times_as_string()
+        else:
+            #in case user forgot '.xlsx extension'
+            outputFile = outputFile +"_" + times_as_string()+ ".xlsx"
+
+        writer = pd.ExcelWriter(outputFile, engine='xlsxwriter')
+        df.to_excel(writer, sheetName)
+        writer.save()
+        writer.close()
+        print("Success!! " + outputFile + " Created ")
+
+    except Exception as e:
+        print("Failed to convert File!: {}".format(e))
