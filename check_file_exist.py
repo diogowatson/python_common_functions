@@ -1,4 +1,4 @@
-def check_file_exit(file, message=None):
+def check_file_exists(file, message=None):
 
     '''
     Checks if a file exists. Abort with a message if don't
