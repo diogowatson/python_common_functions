@@ -10,9 +10,11 @@ def times_as_string():
 
 def save_dataframe_as_excel(df, outputFile, sheetName='sheet1'):
     '''save an pandas DataFrame to an Excel file
-    df -> DataFrame to be converted
-    outputFile -> path and name of the file
-    sheetName -> name of the sheet'''
+       @params:
+           df            - Required : DataFrame to be converted (pandas dataFrame)
+           outputFile    - Required : path and name of the output file (str)
+           sheetName     - Optional : name of the sheet
+    '''
 
     try:
         #.xlsx already in the outputfile string
