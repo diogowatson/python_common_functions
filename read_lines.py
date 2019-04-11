@@ -1,4 +1,4 @@
-read_lines(number_of_lines, file, output_file):
+def read_lines(number_of_lines, file, output_file):
 '''
 Read an N number of lines of a file and save it in a new file
 @param:
