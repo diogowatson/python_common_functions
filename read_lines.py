@@ -6,9 +6,9 @@ def read_lines(number_of_lines, file, output_file):
         file               - Required : file to be read (str)
         output_file        - Required : output file (str)
     '''
-    with open(file) as f, open(output_file) as out:
+    with open(file) as f, open(output_file,'w+') as out:
         head = [next(f) for x in range(number_of_lines)]
-        out.write(head)
+        out.writelines(head)
         
         out.close()
         f.close()
