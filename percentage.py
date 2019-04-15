@@ -13,6 +13,6 @@ def percentage(x, y):
     if x != 0 and y != 0:
         result = float(((x) / y) * 100)
         
-        return '%' + '{0:.2f}'.format(result)  # return only 2 number after .
+        return '%' + '{0:.2f}'.format(result)  # return only 2 numbers after .
     else:
         return '%0'
