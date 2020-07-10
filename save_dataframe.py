@@ -2,10 +2,10 @@ import pandas as pd
 from datetime import datetime as dt
 
 
-def current_time():
-    #returns current date in string format
-
-    return dt.now().strftime('%Y-%m-%d %H %M %S')
+def current_time(time_format='%Y%m%d%H%M%S'):
+    """returns current date in string format
+       it can be overwrited """
+    return dt.now().strftime(time_format)
 
 
 def df_to_excel(df, outputFile, sheetName='sheet1'):
